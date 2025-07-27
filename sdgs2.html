@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UN SDGs Registration Form</title>
+<style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+ 
+        /* Form Container */
+        .container {
+            text-align: center;
+            width: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            color: black;
+        }
+ 
+        /* Headings */
+        .heading {
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: bold;
+        }
+ 
+        /* Labels and Inputs */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a5276;
+        }
+ 
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+ 
+        input:focus, select:focus {
+            border-color: #3498db;
+            box-shadow: 0px 0px 10px rgba(52, 152, 219, 0.5);
+        }
+ 
+        /* Checkboxes */
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 8px;
+        }
+ 
+        /* Fieldset */
+        fieldset {
+            margin-top: 15px;
+            padding: 10px;
+            border: 2px solid #1a5276;
+            border-radius: 8px;
+            background-color: #e8f8f5;
+        }
+ 
+        legend {
+            font-weight: bold;
+            color: #1a5276;
+            font-size: 18px;
+        }
+ 
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, #3498db, #217dbb);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+ 
+        .btn:hover {
+            background: linear-gradient(135deg, #217dbb, #1e6ea1);
+            transform: scale(1.05);
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1 class="heading">UN SDGs Registration</h1>
+<form>
+<label for="first-name">First Name (ALL CAPS):</label>
+<input type="text" id="first-name" name="first-name" required pattern="[A-Z]+(\s[A-Z]+)*" title="Please enter your name using only capital letters (A-Z).">
+ 
+            <label for="surname">Surname (ALL CAPS):</label>
+<input type="text" id="surname" name="surname" required pattern="[A-Z]+(\s[A-Z]+)*" title="Please enter your surname using only capital letters (A-Z).">
+ 
+            <label for="middle-name">Middle Name (ALL CAPS):</label>
+<input type="text" id="middle-name" name="middle-name" required pattern="[A-Z]+(\s[A-Z]+)*" title="Please enter your middle name using only capital letters (A-Z).">
+ 
+            <label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required>
+ 
+            <label for="age">Age:</label>
+<input type="number" id="age" name="age" min="18" required>
+ 
+            <label for="gender">Gender:</label>
+<select id="gender" name="gender" required>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="nonbinary">Non-binary</option>
+<option value="agender">Agender</option>
+<option value="bigender">Bigender</option>
+<option value="genderfluid">Genderfluid</option>
+<option value="genderqueer">Genderqueer</option>
+<option value="demiboy">Demiboy</option>
+<option value="demigirl">Demigirl</option>
+<option value="transmasculine">Transmasculine</option>
+<option value="transfeminine">Transfeminine</option>
+<option value="androgyne">Androgyne</option>
+<option value="two-spirit">Two-Spirit</option>
+<option value="pangender">Pangender</option>
+<option value="neutrois">Neutrois</option>
+<option value="intersex">Intersex</option>
+<option value="third-gender">Third Gender</option>
+<option value="questioning">Questioning</option>
+<option value="other">Other</option>
+<option value="prefer-not-to-say">Prefer Not to Say</option>
+</select>
+ 
+            <fieldset>
+<legend>SDGs of Interest:</legend>
+<label><input type="checkbox" name="sdg" value="poverty"> No Poverty</label>
+<label><input type="checkbox" name="sdg" value="hunger"> Zero Hunger</label>
+<label><input type="checkbox" name="sdg" value="health"> Good Health and Well-being</label>
+<label><input type="checkbox" name="sdg" value="education"> Quality Education</label>
+<label><input type="checkbox" name="sdg" value="equality"> Gender Equality</label>
+<label><input type="checkbox" name="sdg" value="water"> Clean Water and Sanitation</label>
+<label><input type="checkbox" name="sdg" value="energy"> Affordable and Clean Energy</label>
+<label><input type="checkbox" name="sdg" value="work"> Decent Work and Economic Growth</label>
+<label><input type="checkbox" name="sdg" value="industry"> Industry, Innovation, and Infrastructure</label>
+<label><input type="checkbox" name="sdg" value="inequalities"> Reduced Inequalities</label>
+<label><input type="checkbox" name="sdg" value="cities"> Sustainable Cities and Communities</label>
+<label><input type="checkbox" name="sdg" value="consumption"> Responsible Consumption and Production</label>
+<label><input type="checkbox" name="sdg" value="climate"> Climate Action</label>
+<label><input type="checkbox" name="sdg" value="waterlife"> Life Below Water</label>
+<label><input type="checkbox" name="sdg" value="landlife"> Life on Land</label>
+<label><input type="checkbox" name="sdg" value="peace"> Peace, Justice, and Strong Institutions</label>
+<label><input type="checkbox" name="sdg" value="partnerships"> Partnerships for the Goals</label>
+</fieldset>
+ 
+            <button type="submit" class="btn">Register</button>
+			 <div class="back-button-container">
+      <button class="back-button" onclick="window.location.href='about.html'">← Go Back to Home</button>
+    </div>
+</form>
+</div>
+</body>
+</html>

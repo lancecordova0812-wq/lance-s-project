@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sustainable Development Goals</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1535909339361-7a3bfa4f1d5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+ 
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 40px 0;
+    }
+ 
+    .container {
+      width: 960px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      color: #333;
+    }
+ 
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+ 
+    header h1 {
+      font-size: 2.5rem;
+      color: #0072bc;
+    }
+ 
+    header p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+ 
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+ 
+    .content {
+      flex: 3;
+      padding-right: 20px;
+    }
+ 
+    .sidebar {
+      flex: 1;
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+ 
+    .sidebar h3 {
+      margin-bottom: 15px;
+      color: #0072bc;
+    }
+ 
+    .sidebar ul {
+      list-style: none;
+    }
+ 
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+ 
+    .sidebar a {
+      text-decoration: none;
+      color: #0072bc;
+      font-weight: bold;
+    }
+ 
+    .sdg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+ 
+    .sdg-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+ 
+    .sdg-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+ 
+    .sdg-card img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+ 
+    .sdg-card h4 {
+      font-size: 1rem;
+      color: #0072bc;
+      margin-bottom: 8px;
+    }
+ 
+    .sdg-card p {
+      font-size: 0.85rem;
+      color: #333;
+    }
+ 
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+ 
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+ 
+      main {
+        flex-direction: column;
+      }
+ 
+      .content {
+        padding-right: 0;
+      }
+    }
+</style>
+</head>
+<body>
+<div class="overlay">
+<div class="container">
+<header>
+<h1>Sustainable Development Goals</h1>
+<p>17 Goals to Transform Our World</p>
+</header>
+ 
+      <main>
+<div class="content">
+<h2>Our Global Goals</h2>
+<p>Explore the UN's 17 Sustainable Development Goals designed to promote peace, prosperity, and environmental protection by 2030.</p>
+ 
+          <div class="sdg-grid">
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-01.jpg" alt="SDG 1">
+<h4>No Poverty</h4>
+<p>End poverty in all its forms everywhere.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-02.jpg" alt="SDG 2">
+<h4>Zero Hunger</h4>
+<p>End hunger, achieve food security, and improve nutrition.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-03.jpg" alt="SDG 3">
+<h4>Good Health</h4>
+<p>Ensure healthy lives and promote well-being for all.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="SDG 4">
+<h4>Quality Education</h4>
+<p>Ensure inclusive and equitable quality education.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-05.jpg" alt="SDG 5">
+<h4>Gender Equality</h4>
+<p>Achieve gender equality and empower all women and girls.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-06.jpg" alt="SDG 6">
+<h4>Clean Water</h4>
+<p>Ensure availability and sustainable management of water.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-07.jpg" alt="SDG 7">
+<h4>Affordable Energy</h4>
+<p>Ensure access to affordable, reliable and sustainable energy.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg" alt="SDG 8">
+<h4>Decent Work</h4>
+<p>Promote sustained, inclusive and sustainable economic growth.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-09.jpg" alt="SDG 9">
+<h4>Industry & Innovation</h4>
+<p>Build resilient infrastructure and foster innovation.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg" alt="SDG 10">
+<h4>Reduced Inequality</h4>
+<p>Reduce inequality within and among countries.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-11.jpg" alt="SDG 11">
+<h4>Sustainable Cities</h4>
+<p>Make cities inclusive, safe, resilient and sustainable.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="SDG 12">
+<h4>Responsible Consumption</h4>
+<p>Ensure sustainable consumption and production patterns.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="SDG 13">
+<h4>Climate Action</h4>
+<p>Take urgent action to combat climate change and its impacts.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg" alt="SDG 14">
+<h4>Life Below Water</h4>
+<p>Conserve and sustainably use the oceans and marine resources.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-15.jpg" alt="SDG 15">
+<h4>Life on Land</h4>
+<p>Protect, restore and promote sustainable use of ecosystems.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-16.jpg" alt="SDG 16">
+<h4>Peace & Justice</h4>
+<p>Promote peaceful and inclusive societies and justice for all.</p>
+</div>
+<div class="sdg-card">
+<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-17.jpg" alt="SDG 17">
+<h4>Partnerships</h4>
+<p>Strengthen global partnerships to support sustainable development.</p>
+</div>
+</div>
+</div>
+
+          <div class="back-button-container">
+            <button class="back-button" onclick="window.location.href='about.html'">
+              ← Go Back to Home
+            </button>
+          </div>
+        </div>
+        <aside class="sidebar">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="https://sdgs.un.org/goals" target="_blank">UN SDG Website</a></li>
+<li><a href="#">SDG Events</a></li>
+<li><a href="#">Volunteer</a></li>
+<li><a href="#">Contact Us</a></li>
+</ul>
+</aside>
+</main>
+ 
+      <footer>
+<p>&copy; 2025 SDG Awareness Project. Together for a better world.</p>
+</footer>
+</div>
+</div>
+</body>
+</html>
