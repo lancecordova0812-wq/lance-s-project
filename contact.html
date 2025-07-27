@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website - Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="welcome-overlay">
+    <div id="welcome-text">Welcome to Lance's Contact</div>
+  </div>
+
+  <header>
+    <h1 id="main-headline">Welcome to MY LIFE</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit" class="button-sparkle button-pulse">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Glorious Website</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="custom-modal" class="modal hidden">
+    <div class="modal-content">
+      <p id="modal-message">Message goes here</p>
+      <div class="modal-buttons">
+        <button id="modal-ok">OK</button>
+        <button id="modal-cancel" class="hidden">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headline = document.getElementById("main-headline");
+      headline.style.color = "#ff00ff";
+
+      const form = document.getElementById("contact-form");
+      const button = form.querySelector("button");
+
+      const modal = document.getElementById("custom-modal");
+      const modalMessage = document.getElementById("modal-message");
+      const modalOk = document.getElementById("modal-ok");
+      const modalCancel = document.getElementById("modal-cancel");
+
+      function showModal(message, hasCancel = false, callback = null) {
+        modalMessage.textContent = message;
+        modal.classList.remove("hidden");
+
+        modalCancel.classList.toggle("hidden", !hasCancel);
+
+        modalOk.onclick = () => {
+          modal.classList.add("hidden");
+          if (callback) callback(true);
+        };
+        modalCancel.onclick = () => {
+          modal.classList.add("hidden");
+          if (callback) callback(false);
+        };
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+          showModal("Please fill out all fields.");
+          return;
+        }
+
+        button.classList.add("clicked");
+        setTimeout(() => button.classList.remove("clicked"), 200);
+
+        // 🔗 Send form data to Google Sheets
+        fetch("https://script.google.com/macros/s/AKfycbytGMeo050VGoDw8hDHogALlfC3NK9TxkUFvwelIclG4unrHgtLzNd-OYSMPhHPWDrR/exec", {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+        });
+
+        // Show confirmation
+        showModal(`Thank you, ${name}! Your message has been sent.`, false, () => {
+          showModal("Would you like to submit another message?", true, (again) => {
+            if (again) {
+              form.reset();
+            } else {
+              window.location.href = "index.html";
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

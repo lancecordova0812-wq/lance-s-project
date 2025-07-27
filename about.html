@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website - About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="welcome-overlay">
+    <div id="welcome-text">Welcome to Lance Personal Life and Works</div>
+  </div>
+
+  <header>
+    <h1 id="main-headline">Welcome to MY LIFE</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="animate-section">
+      <h2>My Dogs</h2>
+      <div class="dog-gallery">
+        <img src="https://i.postimg.cc/2jcN29P7/bella.jpg" alt="Bella the Dachshund" class="dog-img" />
+        <img src="https://i.postimg.cc/cLYq1x6F/Image-2.jpg" alt="Happy the Shih Tzu" class="dog-img" />
+      </div>
+      <p><strong>Bella</strong> is a sweet and curious Dachshund. She loves burrowing under blankets and chasing toys.</p>
+      <p><strong>Happy</strong> is a cheerful Shih Tzu who enjoys belly rubs and lounging on pillows.</p>
+    </section>
+
+    <section class="animate-section">
+      <h2>Lab Activities</h2>
+      <ul>
+        <li>
+          <a href="file:///C:/Users/Lance/Documents/Bandicam/table%20of%20elements.html">
+            <button class="lab-btn table-btn">Table of Elements</button>
+          </a>
+        </li>
+        <li>
+          <a href="file:///C:/Users/Lance/Documents/Bandicam/sdg-1.html">
+            <button class="lab-btn sdg-btn">SDGs Website</button>
+          </a>
+        </li>
+        <li>
+          <a href="file:///C:/Users/Lance/Documents/Bandicam/sdgs2.html">
+            <button class="lab-btn reg-btn">UN SDGs Registration</button>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="animate-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Playing Basketball</li>
+        <li>Playing Guitar</li>
+        <li>Traveling</li>
+        <li>Reading Sci-Fi Novels</li>
+        <li>Photography</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Glorious Website</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.button-sparkle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('clicked');
+        setTimeout(() => btn.classList.remove('clicked'), 1000);
+      });
+    });
+  </script>
+</body>
+</html>
